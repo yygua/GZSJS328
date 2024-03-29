@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0210)https://jiangxi.notary-chance.com/notary//static/pdfjs/web/viewer.html?file=https://jiangxifile.notary-chance.com/tenant-403287305856483819/470080575659573432/dossierDoc/f8ab85eeff444b33bcc876d321c64da9sign.pdf -->
+<html dir="ltr" mozdisallowselectionprint="" moznomarginboxes=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PDF.js viewer</title>
+    <link rel="stylesheet" href="./viewer.css">
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="https://jiangxi.notary-chance.com/notary//static/pdfjs/web/locale/locale.properties">
+    <script src="./pdf.js.下载"></script>
+    <script src="./viewer.js.下载"></script>
+  </head>
+
+  <body tabindex="1" class="" style="background-color: white">
+    <div id="outerContainer">
+      <div id="sidebarContainer" style="display: none">
+        <div id="toolbarSidebar">
+          <div class="splitToolbarButton toggled">
+            <button id="viewThumbnail" class="toolbarButton toggled" title="显示缩略图" tabindex="2" data-l10n-id="thumbs">
+              <span data-l10n-id="thumbs_label">缩略图</span>
+            </button>
+            <button id="viewOutline" class="toolbarButton" title="显示文档大纲（双击展开/折叠所有项）" tabindex="3" data-l10n-id="document_outline" disabled="">
+              <span data-l10n-id="document_outline_label">文档大纲</span>
+            </button>
+            <button id="viewAttachments" class="toolbarButton" title="显示附件" tabindex="4" data-l10n-id="attachments" disabled="">
+              <span data-l10n-id="attachments_label">附件</span>
+            </button>
+          </div>
+        </div>
+        <div id="sidebarContent">
+          <div id="thumbnailView"><a href="https://jiangxi.notary-chance.com/notary//static/pdfjs/web/viewer.html?file=https://jiangxifile.notary-chance.com/tenant-403287305856483819/470080575659573432/dossierDoc/f8ab85eeff444b33bcc876d321c64da9sign.pdf#page=1" title="页码 1"><div class="thumbnail selected" data-page-number="1"><div class="thumbnailSelectionRing" style="width: 100px; height: 140px;"></div></div></a></div>
+          <div id="outlineView" class="hidden"></div>
+          <div id="attachmentsView" class="hidden"></div>
+        </div>
+      </div>
+      <!-- sidebarContainer -->
+
+      <div id="mainContainer" style="background: #fff">
+        <div class="findbar hidden doorHanger" id="findbar">
+          <div id="findbarInputContainer">
+            <input id="findInput" class="toolbarField" title="查找" placeholder="在文档中查找…" tabindex="91" data-l10n-id="find_input">
+            <div class="splitToolbarButton">
+              <button id="findPrevious" class="toolbarButton findPrevious" title="查找词语上一次出现的位置" tabindex="92" data-l10n-id="find_previous">
+                <span data-l10n-id="find_previous_label">上一页</span>
+              </button>
+              <div class="splitToolbarButtonSeparator"></div>
+              <button id="findNext" class="toolbarButton findNext" title="查找词语后一次出现的位置" tabindex="93" data-l10n-id="find_next">
+                <span data-l10n-id="find_next_label">下一页</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="findbarOptionsContainer">
+            <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+            <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">全部高亮显示</label>
+            <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+            <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">区分大小写</label>
+            <span id="findResultsCount" class="toolbarLabel hidden"></span>
+          </div>
+
+          <div id="findbarMessageContainer">
+            <span id="findMsg" class="toolbarLabel"></span>
+          </div>
+        </div>
+        <!-- findbar -->
+
+        <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+          <div id="secondaryToolbarButtonContainer">
+            <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="切换到演示模式" tabindex="51" data-l10n-id="presentation_mode">
+              <span data-l10n-id="presentation_mode_label">演示模式</span>
+            </button>
+
+            <button id="secondaryOpenFile" class="secondaryToolbarButton openFile visibleLargeView" title="打开文件" tabindex="52" data-l10n-id="open_file">
+              <span data-l10n-id="open_file_label">打开</span>
+            </button>
+
+            <button id="secondaryPrint" class="secondaryToolbarButton print visibleMediumView" title="打印" tabindex="53" data-l10n-id="print">
+              <span data-l10n-id="print_label">打印</span>
+            </button>
+
+            <button id="secondaryDownload" class="secondaryToolbarButton download visibleMediumView" title="下载" tabindex="54" data-l10n-id="download">
+              <span data-l10n-id="download_label">下载</span>
+            </button>
+
+            <a href="https://jiangxi.notary-chance.com/notary//static/pdfjs/web/viewer.html?file=https://jiangxifile.notary-chance.com/tenant-403287305856483819/470080575659573432/dossierDoc/f8ab85eeff444b33bcc876d321c64da9sign.pdf#" id="secondaryViewBookmark" class="secondaryToolbarButton bookmark visibleSmallView" title="当前在看的内容（复制或在新窗口中打开）" tabindex="55" data-l10n-id="bookmark">
+              <span data-l10n-id="bookmark_label">当前在看</span>
+            </a>
+
+            <div class="horizontalToolbarSeparator visibleLargeView"></div>
+
+            <button id="firstPage" class="secondaryToolbarButton firstPage" title="转到第一页" tabindex="56" data-l10n-id="first_page" disabled="">
+              <span data-l10n-id="first_page_label">转到第一页</span>
+            </button>
+            <button id="lastPage" class="secondaryToolbarButton lastPage" title="转到最后一页" tabindex="57" data-l10n-id="last_page" disabled="">
+              <span data-l10n-id="last_page_label">转到最后一页</span>
+            </button>
+
+            <div class="horizontalToolbarSeparator"></div>
+
+            <button id="pageRotateCw" class="secondaryToolbarButton rotateCw" title="顺时针旋转" tabindex="58" data-l10n-id="page_rotate_cw">
+              <span data-l10n-id="page_rotate_cw_label">顺时针旋转</span>
+            </button>
+            <button id="pageRotateCcw" class="secondaryToolbarButton rotateCcw" title="逆时针旋转" tabindex="59" data-l10n-id="page_rotate_ccw">
+              <span data-l10n-id="page_rotate_ccw_label">逆时针旋转</span>
+            </button>
+
+            <div class="horizontalToolbarSeparator"></div>
+
+            <button id="cursorSelectTool" class="secondaryToolbarButton selectTool toggled" title="启用文本选择工具" tabindex="60" data-l10n-id="cursor_text_select_tool">
+              <span data-l10n-id="cursor_text_select_tool_label">文本选择工具</span>
+            </button>
+            <button id="cursorHandTool" class="secondaryToolbarButton handTool" title="启用手形工具" tabindex="61" data-l10n-id="cursor_hand_tool">
+              <span data-l10n-id="cursor_hand_tool_label">手形工具</span>
+            </button>
+
+            <div class="horizontalToolbarSeparator"></div>
+
+            <button id="documentProperties" class="secondaryToolbarButton documentProperties" title="文档属性…" tabindex="62" data-l10n-id="document_properties">
+              <span data-l10n-id="document_properties_label">文档属性…</span>
+            </button>
+          </div>
+        </div>
+        <!-- secondaryToolbar -->
+
+        <div class="toolbar" style="display: none">
+          <div id="toolbarContainer">
+            <div id="toolbarViewer">
+              <div id="toolbarViewerLeft">
+                <button id="sidebarToggle" class="toolbarButton" title="切换侧栏" tabindex="11" data-l10n-id="toggle_sidebar">
+                  <span data-l10n-id="toggle_sidebar_label">切换侧栏</span>
+                </button>
+                <div class="toolbarButtonSpacer"></div>
+                <button id="viewFind" class="toolbarButton" title="在文档中查找" tabindex="12" data-l10n-id="findbar">
+                  <span data-l10n-id="findbar_label">查找</span>
+                </button>
+                <div class="splitToolbarButton hiddenSmallView">
+                  <button class="toolbarButton pageUp" title="上一页" id="previous" tabindex="13" data-l10n-id="previous" disabled="">
+                    <span data-l10n-id="previous_label">上一页</span>
+                  </button>
+                  <div class="splitToolbarButtonSeparator"></div>
+                  <button class="toolbarButton pageDown" title="下一页" id="next" tabindex="14" data-l10n-id="next" disabled="">
+                    <span data-l10n-id="next_label">下一页</span>
+                  </button>
+                </div>
+                <input type="number" id="pageNumber" class="toolbarField pageNumber" title="页面" value="1" size="4" min="1" tabindex="15" data-l10n-id="page" max="1">
+                <span id="numPages" class="toolbarLabel">/ 1</span>
+              </div>
+              <div id="toolbarViewerRight">
+                <button id="presentationMode" class="toolbarButton presentationMode hiddenLargeView" title="切换到演示模式" tabindex="31" data-l10n-id="presentation_mode">
+                  <span data-l10n-id="presentation_mode_label">演示模式</span>
+                </button>
+
+                <!--<button id="openFile" class="toolbarButton openFile hiddenLargeView" title="Open File" tabindex="32" data-l10n-id="open_file">
+                          <span data-l10n-id="open_file_label">Open</span>
+                        </button>-->
+
+                <button id="print" class="toolbarButton print hiddenMediumView" title="打印" tabindex="33" data-l10n-id="print">
+                  <span data-l10n-id="print_label">打印</span>
+                </button>
+
+                <!-- <button id="download" class="toolbarButton download hiddenMediumView" title="Download" tabindex="34" data-l10n-id="download">
+                           <span data-l10n-id="download_label">Download</span>
+                         </button>-->
+                <!-- <a href="#" id="viewBookmark" class="toolbarButton bookmark hiddenSmallView" title="Current view (copy or open in new window)" tabindex="35" data-l10n-id="bookmark">
+                           <span data-l10n-id="bookmark_label">Current View</span>
+                         </a>-->
+
+                <div class="verticalToolbarSeparator hiddenSmallView"></div>
+
+                <!--<button id="secondaryToolbarToggle" class="toolbarButton" title="Tools" tabindex="36" data-l10n-id="tools">
+                          <span data-l10n-id="tools_label">Tools</span>
+                        </button>-->
+              </div>
+              <div id="toolbarViewerMiddle">
+                <div class="splitToolbarButton">
+                  <button id="zoomOut" class="toolbarButton zoomOut" title="缩小" tabindex="21" data-l10n-id="zoom_out">
+                    <span data-l10n-id="zoom_out_label">缩小</span>
+                  </button>
+                  <div class="splitToolbarButtonSeparator"></div>
+                  <button id="zoomIn" class="toolbarButton zoomIn" title="放大" tabindex="22" data-l10n-id="zoom_in">
+                    <span data-l10n-id="zoom_in_label">放大</span>
+                  </button>
+                </div>
+                <span id="scaleSelectContainer" class="dropdownToolbarButton" style="display: inherit;">
+                  <select id="scaleSelect" title="缩放" tabindex="23" data-l10n-id="zoom">
+                    <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">自动缩放</option>
+                    <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">实际大小</option>
+                    <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">适合页面</option>
+                    <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">适合页宽</option>
+                    <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
+                    <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 50 }">50%</option>
+                    <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 75 }">75%</option>
+                    <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 100 }">100%</option>
+                    <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 125 }">125%</option>
+                    <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 150 }">150%</option>
+                    <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 200 }">200%</option>
+                    <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 300 }">300%</option>
+                    <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args="{ &quot;scale&quot;: 400 }">400%</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+            <div id="loadingBar" class="hidden" style="width: calc(100% - 15px);">
+              <div class="progress" style="height: 100%; width: 100%;">
+                <div class="glimmer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <menu type="context" id="viewerContextMenu" style="display: none">
+          <menuitem id="contextFirstPage" label="First Page" data-l10n-id="first_page" title="转到第一页"></menuitem>
+          <menuitem id="contextLastPage" label="Last Page" data-l10n-id="last_page" title="转到最后一页"></menuitem>
+          <menuitem id="contextPageRotateCw" label="Rotate Clockwise" data-l10n-id="page_rotate_cw" title="顺时针旋转"></menuitem>
+          <menuitem id="contextPageRotateCcw" label="Rotate Counter-Clockwise" data-l10n-id="page_rotate_ccw" title="逆时针旋转"></menuitem>
+        </menu>
+
+        <div id="viewerContainer" tabindex="0">
+          <div id="viewer" class="pdfViewer"><div class="page" data-page-number="1" data-loaded="true" style="width: 992px; height: 1403px;"><div class="canvasWrapper" style="width: 992px; height: 1403px;"><canvas id="page1" width="993" height="1404" style="width: 993px; height: 1404px;"></canvas></div><div class="textLayer" style="width: 992px; height: 1403px;"><div style="left: 585.833px; top: 1091.55px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">公证员签名</div><div style="left: 668.333px; top: 1235.3px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">公证处签章</div><div style="left: 459.4166666666666px; top: 127.95124999999993px; font-size: 36.666666666666664px; font-family: sans-serif;">公</div><div style="left: 514.4166666666666px; top: 127.95124999999993px; font-size: 36.666666666666664px; font-family: sans-serif;">证</div><div style="left: 569.4166666666666px; top: 127.95124999999993px; font-size: 36.666666666666664px; font-family: sans-serif;">书</div><div style="left: 468.8333333333333px; top: 288.87500000000006px; font-size: 26.666666666666664px; font-family: sans-serif;">（</div><div style="left: 495.5px; top: 288.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">2024</div><div style="left: 548.833px; top: 288.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">）赣吉水证内字第</div><div style="left: 768.833px; top: 288.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">328</div><div style="left: 815.5px; top: 288.87500000000006px; font-size: 26.666666666666664px; font-family: sans-serif;">号</div><div style="left: 203.33333333333331px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">申</div><div style="left: 230.26166666666666px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">请</div><div style="left: 257.18999999999994px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">人</div><div style="left: 284.11833333333334px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">：</div><div style="left: 311.0466666666666px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">肖</div><div style="left: 337.9749933333333px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">正</div><div style="left: 364.9033166666666px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">德</div><div style="left: 391.83164999999997px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 418.76px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">男</div><div style="left: 445.68833333333333px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 472.617px; top: 392.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">1970</div><div style="left: 532.8783333333332px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">年</div><div style="left: 566.4733333333334px; top: 392.0286458333333px; font-size: 26.666666666666664px; font-family: sans-serif;">6</div><div style="left: 586.7349999999999px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">月</div><div style="left: 620.33px; top: 392.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">10</div><div style="left: 653.925px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">日</div><div style="left: 680.8533666666666px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">出</div><div style="left: 707.7817333333332px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">生</div><div style="left: 734.7100833333333px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 761.6384333333333px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">公</div><div style="left: 788.5668px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">民</div><div style="left: 815.4951666666666px; top: 392.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">身</div><div style="left: 150px; top: 444.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">份号码：</div><div style="left: 256.667px; top: 444.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">360102197006100515</div><div style="left: 496.66666666666663px; top: 444.8750049999998px; font-size: 26.666666666666664px; font-family: sans-serif;">。</div><div style="left: 203.33333333333331px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">李</div><div style="left: 230.89666666666668px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">雪</div><div style="left: 258.46px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">芹</div><div style="left: 286.0233333333333px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 313.58666666666664px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">女</div><div style="left: 341.15px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 368.713px; top: 496.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">1970</div><div style="left: 429.6099999999999px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">年</div><div style="left: 463.84px; top: 496.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">10</div><div style="left: 498.06999999999994px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">月</div><div style="left: 532.3px; top: 496.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">24</div><div style="left: 566.53px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">日</div><div style="left: 594.0933333333334px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">出</div><div style="left: 621.6566499999999px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">生</div><div style="left: 649.2199666666666px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 676.7832999999999px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">公</div><div style="left: 704.3466166666666px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">民</div><div style="left: 731.9099499999999px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">身</div><div style="left: 759.4732666666666px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">份</div><div style="left: 787.0365833333333px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">号</div><div style="left: 814.5999166666666px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">码</div><div style="left: 842.1632333333332px; top: 496.87499999999994px; font-size: 26.666666666666664px; font-family: sans-serif;">：</div><div style="left: 150px; top: 548.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.869049);">36242219701024008X</div><div style="left: 395.92498333333333px; top: 548.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">。</div><div style="left: 203.333px; top: 600.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">公证事项：委托</div><div style="left: 203.33333333333331px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">兹</div><div style="left: 230.57833333333332px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">证</div><div style="left: 257.8233333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">明</div><div style="left: 285.0683333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">肖</div><div style="left: 312.31333333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">正</div><div style="left: 339.55833333333334px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">德</div><div style="left: 366.8033333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">、</div><div style="left: 394.0483333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">李</div><div style="left: 421.2933333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">雪</div><div style="left: 448.5383333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">芹</div><div style="left: 475.78333333333336px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">于</div><div style="left: 509.695px; top: 652.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">2024</div><div style="left: 570.2733333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">年</div><div style="left: 604.185px; top: 652.0286458333333px; font-size: 26.666666666666664px; font-family: sans-serif;">3</div><div style="left: 624.7633333333333px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">月</div><div style="left: 658.675px; top: 652.029px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">28</div><div style="left: 692.5866666666666px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">日</div><div style="left: 719.8316666666666px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">来</div><div style="left: 747.0766166666666px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">到</div><div style="left: 774.3216px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">我</div><div style="left: 801.5665666666665px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">处</div><div style="left: 828.8116666666666px; top: 652.875px; font-size: 26.666666666666664px; font-family: sans-serif;">,</div><div style="left: 150px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">在</div><div style="left: 177.6866658333333px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">本</div><div style="left: 205.37333166666667px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">公</div><div style="left: 233.05999833333334px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">证</div><div style="left: 260.7466633333333px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">员</div><div style="left: 288.43333px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">的</div><div style="left: 316.11999999999995px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">面</div><div style="left: 343.8066666666666px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">前</div><div style="left: 371.49332666666663px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 399.1799933333333px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">在</div><div style="left: 426.8666666666666px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">前</div><div style="left: 454.5533333333332px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">面</div><div style="left: 482.23999999999995px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">的</div><div style="left: 509.9266666666667px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">《</div><div style="left: 537.6133333333332px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">委</div><div style="left: 565.3px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">托</div><div style="left: 592.9866499999999px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">书</div><div style="left: 620.6733166666667px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">》</div><div style="left: 648.36px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">上</div><div style="left: 676.0466666666666px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">签</div><div style="left: 703.7333333333332px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">名</div><div style="left: 731.4199999999998px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">、</div><div style="left: 759.1066666666666px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">按</div><div style="left: 786.7933333333333px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">指</div><div style="left: 814.4799999999999px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">印</div><div style="left: 842.1666666666666px; top: 704.875005px; font-size: 26.666666666666664px; font-family: sans-serif;">，</div><div style="left: 150px; top: 756.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">并表示知悉委托的法律意义和法律后果。</div><div style="left: 203.333px; top: 808.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">肖正德、</div><div style="left: 309.417px; top: 808.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">李雪芹</div><div style="left: 389.417px; top: 808.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">的委托行为符合</div><div style="left: 575.5px; top: 808.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">《中华人民共和国民法</div><div style="left: 150px; top: 860.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">典》第一百四十三条的规定。</div><div style="left: 415.5px; top: 964.875px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">中华人民共和国江西省吉水县公证处</div><div style="left: 561.25px; top: 1094.87px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(1.00025);">公证员</div><div style="left: 635.5px; top: 1250.03px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">2024</div><div style="left: 695.5px; top: 1250.8749999999998px; font-size: 26.666666666666664px; font-family: sans-serif;">年</div><div style="left: 728.8333333333333px; top: 1250.0286458333333px; font-size: 26.666666666666664px; font-family: sans-serif;">3</div><div style="left: 748.8333333333333px; top: 1250.8749999999998px; font-size: 26.666666666666664px; font-family: sans-serif;">月</div><div style="left: 782.167px; top: 1250.03px; font-size: 26.6667px; font-family: sans-serif; transform: scaleX(0.852836);">28</div><div style="left: 815.5px; top: 1250.8749999999998px; font-size: 26.666666666666664px; font-family: sans-serif;">日</div><div class="endOfContent"></div></div></div></div>
+        </div>
+
+        <div id="errorWrapper" hidden="true">
+          <div id="errorMessageLeft">
+            <span id="errorMessage"></span>
+            <button id="errorShowMore" data-l10n-id="error_more_info">更多信息</button>
+            <button id="errorShowLess" data-l10n-id="error_less_info" hidden="true">更少信息</button>
+          </div>
+          <div id="errorMessageRight">
+            <button id="errorClose" data-l10n-id="error_close">关闭</button>
+          </div>
+          <div class="clearBoth"></div>
+          <textarea id="errorMoreInfo" hidden="true" readonly="readonly"></textarea>
+        </div>
+      </div>
+      <!-- mainContainer -->
+
+      <div id="overlayContainer" class="hidden">
+        <div id="passwordOverlay" class="container hidden">
+          <div class="dialog">
+            <div class="row">
+              <p id="passwordText" data-l10n-id="password_label">输入密码以打开此 PDF 文件。</p>
+            </div>
+            <div class="row">
+              <input type="password" id="password" class="toolbarField">
+            </div>
+            <div class="buttonRow">
+              <button id="passwordCancel" class="overlayButton">
+                <span data-l10n-id="password_cancel">取消</span>
+              </button>
+              <button id="passwordSubmit" class="overlayButton">
+                <span data-l10n-id="password_ok">确定</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="documentPropertiesOverlay" class="container hidden">
+          <div class="dialog">
+            <div class="row">
+              <span data-l10n-id="document_properties_file_name">文件名:</span>
+              <p id="fileNameField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_file_size">文件大小:</span>
+              <p id="fileSizeField">-</p>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+              <span data-l10n-id="document_properties_title">标题:</span>
+              <p id="titleField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_author">作者:</span>
+              <p id="authorField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_subject">主题:</span>
+              <p id="subjectField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_keywords">关键词:</span>
+              <p id="keywordsField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_creation_date">创建日期:</span>
+              <p id="creationDateField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_modification_date">修改日期:</span>
+              <p id="modificationDateField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_creator">创建者:</span>
+              <p id="creatorField">-</p>
+            </div>
+            <div class="separator"></div>
+            <div class="row">
+              <span data-l10n-id="document_properties_producer">PDF 生成器：</span>
+              <p id="producerField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_version">PDF 版本:</span>
+              <p id="versionField">-</p>
+            </div>
+            <div class="row">
+              <span data-l10n-id="document_properties_page_count">页数:</span>
+              <p id="pageCountField">-</p>
+            </div>
+            <div class="buttonRow">
+              <button id="documentPropertiesClose" class="overlayButton">
+                <span data-l10n-id="document_properties_close">关闭</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="printServiceOverlay" class="container hidden">
+          <div class="dialog">
+            <div class="row">
+              <span data-l10n-id="print_progress_message">正在准备打印文档…</span>
+            </div>
+            <div class="row">
+              <progress value="0" max="100"></progress>
+              <span data-l10n-id="print_progress_percent" data-l10n-args="{ &quot;progress&quot;: 0 }" class="relative-progress">0%</span>
+            </div>
+            <div class="buttonRow">
+              <button id="printCancel" class="overlayButton">
+                <span data-l10n-id="print_progress_close">取消</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- overlayContainer -->
+    </div>
+    <!-- outerContainer -->
+    <!--<div id="printContainer"></div>-->
+  
+  <script>
+    let timer = null;
+    try {
+      // 轮训判断文件是否加载完成
+      timer = setInterval(function () {
+        if (PDFViewerApplication.pdfDocument) {
+          setTimeout(() => {
+            const dom = document.querySelector("#viewerContainer");
+            dom && (dom.scrollTop = 0);
+            window.parent.postMessage(false, "*");
+          }, 1000);
+          clearInterval(timer);
+        } else {
+          window.parent.postMessage(true, "*");
+        }
+      }, 1000);
+    } catch (e) {
+      clearInterval(timer);
+      console.error(e);
+    }
+  </script>
+
+<input id="fileInput" class="fileInput" type="file"></body></html>
